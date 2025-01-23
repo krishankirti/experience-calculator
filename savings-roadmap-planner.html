@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monthly Saving Calculator helps you plan your financial goals by analyzing income, expenses, and savings.">
+    <meta name="keywords" content="Monthly Saving Calculator, financial planning, budget planner, savings calculator">
+    <meta name="author" content="Quick Calculators Hub">
+    <title>Monthly Saving Calculator - Financial Planning Made Easy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafc;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #0056b3;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #0056b3;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .content {
+            line-height: 1.6;
+            color: #555;
+            font-size: 1rem;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 40px;
+            row-gap: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+
+        input, select, button {
+            padding: 15px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #0056b3;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            grid-column: span 2;
+        }
+
+        button:hover {
+            background-color: #003f7f;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #eef5ff;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .result table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        .result table, .result th, .result td {
+            border: 1px solid #ccc;
+        }
+
+        .result th, .result td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .chart {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .blog-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .blog-section h3 {
+            color: #0056b3;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .blog-section p {
+            line-height: 1.8;
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Monthly Saving Calculator</h1>
+        <p>Your go-to tool for financial planning and savings optimization.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="types.html">Types of Calculators</a>
+    </nav>
+
+    <div class="container">
+        <h2>Plan Your Savings</h2>
+        <p class="content">Our Monthly Saving Calculator helps you create a savings plan by analyzing your monthly income, expenses, and financial goals. This tool is designed to provide actionable insights into your budget and saving potential.</p>
+
+        <form id="financialForm">
+            <div>
+                <label for="income">Monthly Income:</label>
+                <input type="number" id="income" placeholder="Enter your monthly income" required>
+            </div>
+
+            <div>
+                <label for="fixedExpenses">Fixed Expenses:</label>
+                <input type="number" id="fixedExpenses" placeholder="e.g., Rent, Utilities" required>
+            </div>
+
+            <div>
+                <label for="variableExpenses">Variable Expenses:</label>
+                <input type="number" id="variableExpenses" placeholder="e.g., Groceries, Entertainment" required>
+            </div>
+
+            <div>
+                <label for="debts">Debts:</label>
+                <input type="number" id="debts" placeholder="e.g., Loan Payments">
+            </div>
+
+            <div>
+                <label for="goalAmount">Goal Amount:</label>
+                <input type="number" id="goalAmount" placeholder="e.g., Save for vacation" required>
+            </div>
+
+            <div>
+                <label for="goalTime">Goal Time (in months):</label>
+                <input type="number" id="goalTime" placeholder="e.g., 12 months" required>
+            </div>
+
+            <button type="submit">Calculate Savings Plan</button>
+        </form>
+
+        <div class="result" id="result" style="display: none;"></div>
+
+        <div class="chart">
+            <canvas id="savingsChart" width="400" height="200"></canvas>
+        </div>
+
+        <div class="blog-section">
+            <h3>What is a Monthly Saving Calculator?</h3>
+            <p>A Monthly Saving Calculator is a financial tool designed to help you understand how much money you can save each month. By inputting details like your income, fixed expenses, variable costs, and financial goals, this calculator provides a clear roadmap to achieving your savings targets.</p>
+
+            <h3>Benefits of Using a Monthly Saving Calculator</h3>
+            <p>1. Helps in Budget Planning: You can allocate your income more effectively by understanding your spending patterns.</p>
+            <p>2. Achieve Financial Goals: Whether it’s saving for a vacation, emergency fund, or a new car, this calculator provides actionable insights.</p>
+            <p>3. Identify Spending Gaps: It highlights areas where you can cut down on unnecessary expenses.</p>
+
+            <h3>How to Use the Monthly Saving Calculator?</h3>
+            <p>1. Enter your total monthly income.</p>
+            <p>2. Input fixed expenses like rent, utilities, and insurance.</p>
+            <p>3. Include variable expenses such as groceries and entertainment.</p>
+            <p>4. Add any existing debts or loans.</p>
+            <p>5. Specify your financial goal and the time frame to achieve it.</p>
+            <p>The calculator will then provide a detailed analysis of your savings capability and suggest adjustments if needed.</p>
+
+            <h3>Why Financial Planning is Important</h3>
+            <p>Effective financial planning ensures that you’re prepared for unexpected expenses while staying on track to meet your goals. It also helps reduce financial stress by giving you a clear understanding of your financial health.</p>
+
+            <p>Use our Monthly Saving Calculator to take the first step towards a secure financial future.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Quick Calculators Hub. All rights reserved. Optimize your finances with our tools.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.getElementById('financialForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const income = parseFloat(document.getElementById('income').value);
+            const fixedExpenses = parseFloat(document.getElementById('fixedExpenses').value);
+            const variableExpenses = parseFloat(document.getElementById('variableExpenses').value);
+            const debts = parseFloat(document.getElementById('debts').value) || 0;
+            const goalAmount = parseFloat(document.getElementById('goalAmount').value);
+            const goalTime = parseInt(document.getElementById('goalTime').value);
+
+            const totalExpenses = fixedExpenses + variableExpenses + debts;
+            const savings = income - totalExpenses;
+            const monthlyGoal = goalAmount / goalTime;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+
+            if (savings >= monthlyGoal) {
+                resultDiv.innerHTML = `Great! You can save <strong>${monthlyGoal.toFixed(2)}</strong> per month to achieve your goal.`;
+                resultDiv.style.backgroundColor = '#d4edda';
+                resultDiv.style.color = '#155724';
+            } else {
+                const shortfall = monthlyGoal - savings;
+                const reductionFactor = shortfall / (fixedExpenses + variableExpenses);
+                const suggestedFixedExpenses = fixedExpenses * (1 - reductionFactor);
+                const suggestedVariableExpenses = variableExpenses * (1 - reductionFactor);
+
+                resultDiv.innerHTML = `Your income is not sufficient to meet your goals. Below is a suggested adjustment of your expenses:`;
+                resultDiv.style.backgroundColor = '#f8d7da';
+                resultDiv.style.color = '#721c24';
+
+                const table = `<table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Current</th>
+                            <th>Suggested</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fixed Expenses</td>
+                            <td>${fixedExpenses.toFixed(2)}</td>
+                            <td>${Math.max(suggestedFixedExpenses, 0).toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td>Variable Expenses</td>
+                            <td>${variableExpenses.toFixed(2)}</td>
+                            <td>${Math.max(suggestedVariableExpenses, 0).toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td>Debts</td>
+                            <td>${debts.toFixed(2)}</td>
+                            <td>${debts.toFixed(2)} (Unchanged)</td>
+                        </tr>
+                    </tbody>
+                </table>`;
+
+                resultDiv.innerHTML += table;
+            }
+        });
+    </script>
+</body>
+</html>

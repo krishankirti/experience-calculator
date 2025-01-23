@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your net salary based on the new or old tax regimes using this comprehensive Salary Calculator. Decide which regime is best for you.">
+    <meta name="keywords" content="Salary Calculator, Indian Tax Calculator, Net Salary Calculator, Old vs New Tax Regime">
+    <title>Calculate Net Salary Based on New or Old Tax Regimes</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        nav {
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #0077cc;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            color: #28a745;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .info-section {
+            margin-top: 40px;
+        }
+
+        .info-section h2 {
+            font-size: 1.8rem;
+            color: #0077cc;
+        }
+
+        footer {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        footer a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculate Net Salary Based on New or Old Tax Regimes</h1>
+        <p>Find out your net take-home salary and decide the best tax regime for your needs.</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="types.html">Types of Calculators</a>
+    </nav>
+    <div class="container">
+        <form id="salaryForm">
+            <label for="tax-regime">Select Tax Regime:</label>
+            <select id="tax-regime">
+                <option value="new">New Tax Regime</option>
+                <option value="old">Old Tax Regime</option>
+            </select>
+
+            <label for="annual-salary">Annual Salary (in ₹):</label>
+            <input type="number" id="annual-salary" placeholder="Enter your annual salary" min="0">
+
+            <button type="button" onclick="calculateNetSalary()">Calculate Net Salary</button>
+        </form>
+        <div class="result" id="result"></div>
+        <div class="note" id="note"></div>
+    </div>
+
+    <div class="info-section container">
+        <h2>About This Calculator</h2>
+        <p>This Salary Calculator helps Indian taxpayers estimate their net monthly take-home salary under the old and new tax regimes. It empowers you to make an informed decision about which regime aligns best with your financial goals.</p>
+
+        <h2>Choosing Between Old and New Tax Regimes</h2>
+        <p>The old tax regime provides a range of exemptions and deductions, making it beneficial for taxpayers who invest in tax-saving instruments. Key features include:</p>
+        <ul>
+            <li>₹1,50,000 deduction under Section 80C.</li>
+            <li>Additional deductions under Sections 80D, 24(b), and more.</li>
+            <li>A basic exemption limit of ₹2,50,000 for individuals below 60 years.</li>
+        </ul>
+        <p>In contrast, the new tax regime offers a simplified structure with lower tax rates but eliminates most exemptions. Key features include:</p>
+        <ul>
+            <li>A higher basic exemption limit of ₹3,00,000.</li>
+            <li>A standard deduction of ₹75,000 for salaried individuals.</li>
+            <li>Flat tax slabs without the need for additional documentation or investments.</li>
+        </ul>
+
+        <h2>Which Tax Regime is Right for You?</h2>
+        <p>Your choice between the two regimes depends on your income level, investment habits, and financial goals. Use this calculator to compare your net take-home salary under both regimes and choose the one that maximizes your disposable income.</p>
+
+        <h2>Key Guidelines</h2>
+        <ul>
+            <li>This calculator assumes standard slabs and deductions for accurate estimation.</li>
+            <li>For more detailed information, consult a tax advisor or refer to the official <a href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-1#taxslabs" target="_blank">Income Tax India</a> website.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Online Calculator Hub. All rights reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    <script>
+        function calculateNetSalary() {
+            const annualSalary = Number(document.getElementById('annual-salary').value);
+            const taxRegime = document.getElementById('tax-regime').value;
+
+            if (annualSalary <= 0) {
+                document.getElementById('result').innerText = 'Please enter a valid annual salary.';
+                document.getElementById('note').innerText = '';
+                return;
+            }
+
+            let netSalary;
+
+            if (taxRegime === 'new') {
+                let tax = 0;
+                const exemption = 300000; // Basic exemption limit
+                const standardDeduction = 75000; // Standard deduction for salaried individuals
+                const taxableIncome = Math.max(0, annualSalary - exemption - standardDeduction);
+
+                if (taxableIncome > 1500000) tax = (taxableIncome - 1500000) * 0.30 + 300000;
+                else if (taxableIncome > 1200000) tax = (taxableIncome - 1200000) * 0.20 + 180000;
+                else if (taxableIncome > 900000) tax = (taxableIncome - 900000) * 0.15 + 90000;
+                else if (taxableIncome > 700000) tax = (taxableIncome - 700000) * 0.10 + 45000;
+                else if (taxableIncome > 300000) tax = (taxableIncome - 300000) * 0.05;
+
+                netSalary = (annualSalary - tax) / 12;
+                document.getElementById('note').innerText = 'Note: The new tax regime includes a basic exemption limit of ₹3,00,000 and a standard deduction of ₹75,000 for salaried individuals. Tax computations are based on official guidelines from the Income Tax India website.';
+            } else {
+                let taxableIncome = Math.max(0, annualSalary - 150000); // Old regime standard deduction assumption
+                let tax = 0;
+                if (taxableIncome > 1000000) tax = (taxableIncome - 1000000) * 0.30 + 125000;
+                else if (taxableIncome > 500000) tax = (taxableIncome - 500000) * 0.20 + 25000;
+                else if (taxableIncome > 250000) tax = (taxableIncome - 250000) * 0.05;
+
+                netSalary = (annualSalary - tax) / 12;
+                document.getElementById('note').innerText = 'Note: The old tax regime assumes ₹1,50,000 deduction under Section 80C and a basic exemption limit of ₹2,50,000. Tax computations are based on official guidelines from the Income Tax India website.';
+            }
+
+            document.getElementById('result').innerHTML = `Net Monthly Salary (Approximately) : ₹${netSalary.toFixed(2)}`
+        }
+    </script>
+</body>
+</html>

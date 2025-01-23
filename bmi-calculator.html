@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive guide to BMI calculations in India, complete with a BMI calculator and actionable health insights.">
+    <meta name="keywords" content="BMI Calculator India, Body Mass Index, Health Calculator, BMI Guide">
+    <title>BMI Calculator India: Comprehensive Guide to Health</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        nav {
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #0077cc;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #0077cc;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            color: #28a745;
+        }
+
+        footer {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        footer a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BMI Calculator India: Your Health Guide</h1>
+        <p>Calculate your BMI and gain actionable insights into your health with this BMI Calculator tailored for India.</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="types.html">Types of Calculators</a>
+    </nav>
+    <div class="container">
+        <form id="bmiForm">
+            <h2>Calculate Your BMI</h2>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight in kilograms" min="1" step="0.1">
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter your height in centimeters" min="1" step="0.1">
+
+            <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    <div class="container">
+        <h2>What is BMI?</h2>
+        <p>Body Mass Index (BMI) is a numerical value derived from a person's weight and height. It is used to classify individuals into categories such as underweight, normal weight, overweight, and obesity. BMI serves as a quick and easy screening tool to assess health risks associated with body weight in India.</p>
+
+        <h2>How to Calculate BMI with the BMI Calculator India?</h2>
+        <p>The formula for calculating BMI is:</p>
+        <p><strong>BMI = Weight (kg) / [Height (m)]<sup>2</sup></strong></p>
+        <p>For example, if you weigh 70 kg and your height is 1.75 meters, your BMI is:</p>
+        <p><strong>BMI = 70 / (1.75 * 1.75) = 22.86</strong></p>
+
+        <h2>What Do BMI Numbers Mean in India?</h2>
+        <ul>
+            <li><strong>Underweight:</strong> BMI less than 18.5</li>
+            <li><strong>Normal weight:</strong> BMI between 18.5 and 24.9</li>
+            <li><strong>Overweight:</strong> BMI between 25 and 29.9</li>
+            <li><strong>Obesity:</strong> BMI 30 or higher</li>
+        </ul>
+
+        <h2>Why is BMI Important in India?</h2>
+        <p>BMI is an effective tool to assess health risks related to weight, particularly in India where malnutrition and lifestyle diseases coexist. For instance:</p>
+        <ul>
+            <li><strong>Underweight:</strong> May indicate malnutrition or other health concerns common in rural and urban poor populations.</li>
+            <li><strong>Overweight and Obesity:</strong> Associated with increased risk of diabetes, heart disease, and other chronic illnesses prevalent in urban areas.</li>
+        </ul>
+
+        <h2>Limitations of BMI</h2>
+        <p>While BMI is a useful screening tool, it has some limitations:</p>
+        <ul>
+            <li>It does not differentiate between muscle and fat mass, which is significant for athletes and fitness enthusiasts.</li>
+            <li>It may not accurately reflect health for older adults with naturally lower muscle mass.</li>
+        </ul>
+
+        <h2>Tips for Maintaining a Healthy BMI in India</h2>
+        <ul>
+            <li>Adopt a balanced diet rich in local fruits, vegetables, and whole grains like millets.</li>
+            <li>Engage in regular physical activity, such as walking, jogging, or yoga, which are culturally relevant in India.</li>
+            <li>Stay hydrated with water and healthy alternatives like coconut water.</li>
+            <li>Avoid processed foods high in salt and sugar, which are common in urban diets.</li>
+        </ul>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Online Calculator Hub. All rights reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        function calculateBMI() {
+            const weight = Number(document.getElementById('weight').value);
+            const height = Number(document.getElementById('height').value) / 100; // Convert cm to meters
+
+            if (weight <= 0 || height <= 0) {
+                document.getElementById('result').innerText = 'Please enter valid weight and height values.';
+                return;
+            }
+
+            const bmi = (weight / (height * height)).toFixed(2);
+            let category = '';
+
+            if (bmi < 18.5) {
+                category = 'Underweight';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                category = 'Normal weight';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                category = 'Overweight';
+            } else {
+                category = 'Obesity';
+            }
+
+            document.getElementById('result').innerText = `Your BMI is ${bmi} (${category}).`;
+        }
+    </script>
+</body>
+</html>
