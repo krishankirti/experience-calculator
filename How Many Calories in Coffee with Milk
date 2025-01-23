@@ -7,10 +7,93 @@
     <meta name="keywords" content="how many calories in coffee with milk, coffee calories, coffee with milk nutrition">
     <meta name="author" content="Visit Ayodhya Ram Mandir">
     <title>How Many Calories in Coffee with Milk? A Complete Guide</title>
+    <link rel="stylesheet" href="https://www.expcalculators.com/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5rem 0;
+        }
+
+        .top-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-menu li {
+            margin: 0 1rem;
+        }
+
+        .top-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .top-menu a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #444;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>How Many Calories in Coffee with Milk? A Complete Guide</h1>
+        <nav>
+            <ul class="top-menu">
+                <li><a href="https://www.expcalculators.com">Home</a></li>
+                <li><a href="https://www.expcalculators.com/calculators">Calculators</a></li>
+                <li><a href="https://www.expcalculators.com/articles">Articles</a></li>
+                <li><a href="https://www.expcalculators.com/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Online Calculator Hub</h1>
+        <p>Your go-to place for quick and accurate online calculations.</p>
     </header>
 
     <main>
@@ -75,7 +158,8 @@
     </main>
 
     <footer>
-        <p>&copy; © 2025 ExpCalculators. All rights reserved. All rights reserved.</p>
+        <p>&copy; 2025 ExpCalculators. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
